@@ -13,6 +13,7 @@ import {
   TrendingUp,
   LineStyle,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 export default function sidebar() {
   return (
     <div className="sidebar">
@@ -20,10 +21,12 @@ export default function sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
+            <Link to="/" className="link">
+              <li className="sidebarListItem active">
+                <LineStyle className="sidebarIcon" />
+                Home
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <Timeline />
               Analytics
@@ -37,14 +40,18 @@ export default function sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <People className="People" />
-              Users
-            </li>
-            <li className="sidebarListItem">
-              <Inventory2 />
-              Products
-            </li>
+            <Link to="/users" className="Link">
+              <li className="sidebarListItem ">
+                <People className="People" />
+                Users
+              </li>
+            </Link>
+            <Link to="/products" className="Link">
+              <li className="sidebarListItem">
+                <Inventory2 />
+                Products
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <Paid />
               Transaction
@@ -58,7 +65,7 @@ export default function sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
+            <li className="sidebarListItem ">
               <Email className="Email" />
               Mail
             </li>
@@ -75,7 +82,7 @@ export default function sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Staff</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
+            <li className="sidebarListItem ">
               <ManageSearch className="ManageSearch" />
               Manage
             </li>
